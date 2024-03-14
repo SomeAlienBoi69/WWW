@@ -1,0 +1,28 @@
+from django.db import models
+
+class Seller(models.Model):
+    Name = models.CharField(max_length=50)
+    PhoneNumber = models.IntegerField()
+
+
+
+class Product(models.Model):
+    Name = models.CharField(max_length=50)
+    Price = models.DecimalField(max_digits=10,decimal_places=2 )
+    Description = models.CharField(max_length=500)
+    SellerID = models.ForeignKey(Seller, on_delete=models.SET_NULL, null = True)
+
+class Client(models.Model):
+    Name = models.CharField(max_length=50)
+    PhoneNumber = models.IntegerField()
+    Adress = models.CharField(max_length=100)
+
+
+
+
+
+
+
+    
+
+# Create your models here.
