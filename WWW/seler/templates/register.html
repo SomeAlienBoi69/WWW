@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main.css' %}"> 
+
+{% include 'navbar.html' %}
+<body>
+
+    <title>Zarejestruj się</title>
+
+    <section>
+       <div class="container">
+           <h2>Rejestracja</h2>
+           <form method="post">
+               {% csrf_token %}
+               {% for field in form %}
+                   <div>
+                       {{ field.label_tag }}<br>
+                       {{ field }}
+                       {% if field.help_text %}
+                           <small style="color: rgb(255, 255, 255)">{{ field.help_text }}</small>
+                       {% endif %}
+                       {% for error in field.errors %}
+                           <p style="color: rgb(252, 72, 72)">{{ error }}</p>
+                       {% endfor %}
+                   </div>
+               {% endfor %}
+               <button class="login_button" type="submit">Zarejestruj się</button>
+           </form>
+           <form>
+                <p>Masz konto? <button class="login_button" type="submit" formaction="{% url 'login' %}">Zaloguj się</button></p>
+           </form>
+       </div>
+    </section>
+</body>

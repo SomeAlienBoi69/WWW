@@ -1,0 +1,35 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main.css' %}"> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Super wyśmienita strona</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div id="space"></div>
+    
+    <header>
+        <h1 id="SG">Strona Główna</h1>
+        {% if user.is_authenticated %}
+            <h3>Jesteś zalogowany jako {{user}}</h3>
+            <form>
+                <button class="login_button" type="submit" formaction="{% url 'logout' %}">Wyloguj się</button>
+            </form>
+        {% else %}
+            <h3>Nie jesteś zalogowany</h3>
+            <form>
+                <button class="login_button" type="submit" formaction="{% url 'login' %}">Zaloguj się</button>
+                <button class="login_button" type="submit" formaction="{% url 'register' %}">Zarejestruj się</button>
+            </form>
+        {% endif %}
+    </header>
+    <div id="space"></div>
+
+    <div id="main">
+
+    </div>
+</body>
+</html>
