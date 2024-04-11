@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Super wyśmienita strona</title>
+    <title>Selery Shop</title>
     <meta charset="UTF-8">
 </head>
 <body>
@@ -12,24 +12,18 @@
     <div id="space"></div>
     
     <header>
-        <h1 id="SG">Strona Główna</h1>
-        {% if user.is_authenticated %}
-            <h3>Jesteś zalogowany jako {{user}}</h3>
-            <form>
-                <button class="login_button" type="submit" formaction="{% url 'logout' %}">Wyloguj się</button>
-            </form>
-        {% else %}
-            <h3>Nie jesteś zalogowany</h3>
-            <form>
-                <button class="login_button" type="submit" formaction="{% url 'login' %}">Zaloguj się</button>
-                <button class="login_button" type="submit" formaction="{% url 'register' %}">Zarejestruj się</button>
-            </form>
-        {% endif %}
+        <h1 id="SG">Selery Shop</h1>
     </header>
     <div id="space"></div>
 
     <div id="main">
-
+        <table>
+            {% for products in Product %}
+                <tr>
+                    <td>{{ products.Name }}</td>
+                </tr>
+            {% endfor %}
+        </table>
     </div>
 </body>
 </html>
