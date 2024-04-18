@@ -28,12 +28,10 @@
 
                 <div class="produkty">
                     <div class="produkt">
-                        <img src="{{ product.Image_url}}">  
+                        <img src="{{ product.Image_url}}">
                         <h2> {{product.Name}} </h2>
                         <h3> {{product.Price}}
-                            <form action="{% url 'product_details' %}">
-                                <button type="submit">Buy</button>
-                            </form>
+
                         </h3>
                     </div>
                 </div>

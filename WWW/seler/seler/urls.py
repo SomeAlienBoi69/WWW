@@ -20,6 +20,7 @@ from selers.views import home_view
 from django.contrib.auth import views as auth_views
 from selers.views import register
 from selers.views import help
+from selers.views import product_details
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,5 +28,6 @@ urlpatterns = [
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('register/', register, name='register'),
-    path('help/',help,name ="help")
+    path('help/',help,name ="help"),
+    path('product_details/',product_details,name='product_details')
 ]

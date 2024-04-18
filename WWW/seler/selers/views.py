@@ -32,3 +32,6 @@ def register(request):
 
 def help(request):
     return render(request, 'help.html')
+
+def product_details(request):
+    return render(request, 'product_details.html')
