@@ -7,7 +7,7 @@ from .models import Seller, Product, Client
 class SellerAdmin(admin.ModelAdmin):
     list_display = ('Name',)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('Name','Price','Description')
+    list_display = ('Name','Price','Description','Image_url')
 class ClientAdmin(admin.ModelAdmin):
     list_display = ('Name',)
 

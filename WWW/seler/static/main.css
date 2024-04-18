@@ -73,3 +73,8 @@ section {
     align-items: center;
     justify-content: center;
 }
+
+.produkty {
+    display: flex;
+    flex-direction: row;
+}

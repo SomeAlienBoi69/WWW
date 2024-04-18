@@ -3,14 +3,18 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 
+from selers.models import Product, Seller, Client
+
 # Create your views here.
 
 def home_view(request):
+    all_products = Product.objects.all()
     context = {
-        'message': 'Witaj na stronie głównej'
+        'message': 'Witaj na stronie głównej',
+        'products': all_products
     }
 
-    return render(request, 'home.html', context=context)
+    return render(request, 'home.html', context)
 
 def register(request):
     if request.method == 'POST':

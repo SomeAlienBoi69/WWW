@@ -18,10 +18,22 @@
 
     <div id="main">
         <table>
-            {% for products in Product %}
-                <tr>
-                    <td>{{ products.Name }}</td>
-                </tr>
+            {% for product in products %} 
+            <!--    <tr>
+                    <td>{{ product.Name }}</td>
+                    <th> {{ product.Price }}
+                        <button>Buy</button>
+                    </th>
+                </tr> !-->
+
+                <div class="produkty">
+                    <h2> {{product.Name}} </h2>
+                    <h3> {{product.Price}}
+                        <button>Buy</button>
+                    </h3>
+                </div>
+
+
             {% endfor %}
         </table>
     </div>
