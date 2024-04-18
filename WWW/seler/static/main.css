@@ -105,3 +105,23 @@ section {
     display: flex;
     flex-direction: column;
 }
+
+.PomocDiv {
+    
+    table {
+        padding: 200px;
+        margin: 90px;
+        width: 90%;
+
+        tr, th, td {
+            border: 1px solid white;
+        }
+
+        img {
+            max-width: 70%;
+            height: auto;
+        }
+
+    }
+
+}
