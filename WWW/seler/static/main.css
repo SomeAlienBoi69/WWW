@@ -52,7 +52,6 @@ body {
     font-size: 20px;
     background-color: transparent;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -77,4 +76,10 @@ section {
 .produkty {
     display: flex;
     flex-direction: row;
+
+    img {
+        max-height: 200px;
+        max-width: 200px;
+        height: auto;
+    }
 }
