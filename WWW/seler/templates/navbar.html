@@ -1,6 +1,6 @@
 <div id="navbar">
     <a href="{% url 'home' %}">Strona Główna</a>
-    <a>Kategorie</a>
+    <a href="{% url 'categories' %}">Kategorie</a>
     <a href="{% url 'help' %}">Pomoc</a>
     <a></a>
     {% if user.is_authenticated %}

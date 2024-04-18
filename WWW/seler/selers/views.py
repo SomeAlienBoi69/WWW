@@ -35,3 +35,6 @@ def help(request):
 
 def product_details(request):
     return render(request, 'product_details.html')
+
+def categories(request):
+    return render(request, 'categories.html')

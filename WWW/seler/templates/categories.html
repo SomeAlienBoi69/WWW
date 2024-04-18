@@ -1,0 +1,65 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main.css' %}"> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selery Shop</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div id="space"></div>
+    
+
+    <div id="space"></div>
+
+    <div id="main">
+        <table>
+            {% for product in products %} 
+            <!--    <tr>
+                    <td>{{ product.Name }}</td>
+                    <th> {{ product.Price }}
+                        <button>Buy</button>
+                    </th>
+                </tr> !-->
+
+                <div class="produkty">
+                    <div class="produkt">
+                        <img src="{{ product.Image_url}}">
+                        <h2> {{product.Name}} </h2>
+                        <h3> {{product.Price}}
+
+                        </h3>
+                    </div>
+                </div>
+            {% endfor %}
+        </table>
+    </div>
+    <aside class="products__menu">
+        <ul>
+            <li>
+                SELERY 1
+                <ul>
+                    <li>
+                        SELERY ZWYKLE
+                        <ul>
+                            <li>RUSKIE</li>
+                            <li>POLSKA GUROM</li>
+                            <li>ALBANSKIE</li>
+                        </ul>
+                    </li>
+                    <li>
+                        SELERY+
+                        <ul>
+                            <li>AZERBEJDŻAŃSKIE</li>
+                            <li>O POANIE Z DUBAJU</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>State of colorade</li>
+        </ul>
+    </aside>
+</body>
+</html>

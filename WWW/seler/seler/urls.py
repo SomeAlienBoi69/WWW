@@ -21,6 +21,7 @@ from django.contrib.auth import views as auth_views
 from selers.views import register
 from selers.views import help
 from selers.views import product_details
+from selers.views import categories
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -29,5 +30,6 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('register/', register, name='register'),
     path('help/',help,name ="help"),
-    path('product_details/',product_details,name='product_details')
+    path('product_details/',product_details,name='product_details'),
+    path('categories',categories,name='categories')
 ]
