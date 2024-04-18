@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'main.css' %}"> 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selery Shop - Profil</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div id="space"></div>
+
+    <header id="SG">
+        <h1>Profil</h1>
+    </header>
+
+    <div id="space"></div>
+
+    <div id="main">
+
+        <div class="Profile">
+
+            {% if user.is_authenticated %}
+
+            <h2> Nazwa: {{user}} </h2>
+            <h2> Email: {{user.email}} </h2>
+
+            <form action="{% url 'logout' %}">
+                <button type="submit">Wyloguj się</button>
+            </form>
+
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

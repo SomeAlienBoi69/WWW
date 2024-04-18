@@ -20,7 +20,7 @@ header {
 
 body {
     /* background-color: #504e4e; */
-    background-image: linear-gradient(to top, white, #504e4e);
+    background-image: linear-gradient(to top, black, #504e4e);
 }
 
 #space {
@@ -54,6 +54,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #back {
@@ -74,12 +75,33 @@ section {
 }
 
 .produkty {
+
     display: flex;
     flex-direction: row;
+    /* border: solid 1px white; */
+    height: 350px;
+    margin: 1%;
 
     img {
         max-height: 200px;
-        max-width: 200px;
+        max-width: 250px;
         height: auto;
+        padding: 20px;
     }
+
+    .produkt {
+        display: flex;
+        flex-direction: column;
+        min-width: 300px;
+    }
+
+}
+
+#przycisk {
+    width: 20px;
+}
+
+.Profile {
+    display: flex;
+    flex-direction: column;
 }

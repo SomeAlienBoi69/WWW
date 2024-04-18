@@ -38,3 +38,25 @@ def product_details(request):
 
 def categories(request):
     return render(request, 'categories.html')
+
+def product_details(request, id):
+
+    try:
+        product = Product.objects.get(id=id)
+    except Product.DoesNotExist:
+        product = None
+
+    context = {
+        'product': product
+    }
+
+    return render(request, 'product_details.html', context)
+
+def profilePage(request):
+
+    if not request.user.is_authenticated:
+
+        return redirect('login')
+    
+    else:
+        return render(request, 'profilePage.html')

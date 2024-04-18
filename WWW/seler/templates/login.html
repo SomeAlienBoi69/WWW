@@ -3,19 +3,19 @@
     {% include "navbar.html" %}
     <div id="space"></div>
 
-<title>Zaloguj się</title>
+<title>Selery Shop - Logowanie</title>
 
 <section>
-   <div id="main">
+   <div>
 
-       <h2>Logowanie</h2>
-       <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-    <button type="submit" class="login_button">Zaloguj się</button>
-    </form>
-    <form>
-        <p>Nie masz konta? <button class="login_button" type="submit" formaction="{% url 'register' %}">Zarejestruj się</button></p>
-    </form>
-</div>
+           <h2>Logowanie</h2>
+           <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+        <button type="submit" class="login_button">Zaloguj się</button>
+        </form>
+        <form>
+            <p>Nie masz konta? <button class="login_button" type="submit" formaction="{% url 'register' %}">Zarejestruj się</button></p>
+        </form>
+    </div>
 </section>

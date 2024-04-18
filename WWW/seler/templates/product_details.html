@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Selery Shop</title>
+    <title>Selery Shop - {{product.Name}} </title>
     <meta charset="UTF-8">
 </head>
 <body>
@@ -18,24 +18,16 @@
 
     <div id="main">
         <table>
-            {% for product in products %} 
-            <!--    <tr>
-                    <td>{{ product.Name }}</td>
-                    <th> {{ product.Price }}
-                        <button>Buy</button>
-                    </th>
-                </tr> !-->
-
+            {% if product %} 
                 <div class="produkty">
                     <div class="produkt">
                         <img src="{{ product.Image_url}}">
                         <h2> {{product.Name}} </h2>
-                        <h3> {{product.Price}}
-
-                        </h3>
+                        <h3> {{product.Price}} PLN</h3>
+                        <h4> Opis produktu: <br> {{product.Description}}</h4>
                     </div>
                 </div>
-            {% endfor %}
+            {% endif %}
         </table>
     </div>
 </body>

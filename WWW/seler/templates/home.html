@@ -19,19 +19,12 @@
     <div id="main">
         <table>
             {% for product in products %} 
-            <!--    <tr>
-                    <td>{{ product.Name }}</td>
-                    <th> {{ product.Price }}
-                        <button>Buy</button>
-                    </th>
-                </tr> !-->
-
                 <div class="produkty">
                     <div class="produkt">
                         <img src="{{ product.Image_url}}">  
-                        <h2> {{product.Name}} </h2>
-                        <h3> {{product.Price}}
-                            <form action="{% url 'product_details' %}">
+                        <a href="{% url 'product_details' product.id %}"> {{product.Name}} </a>
+                        <h3> {{product.Price}} PLN
+                            <form action="{% url 'help' %}">
                                 <button type="submit">Buy</button>
                             </form>
                         </h3>

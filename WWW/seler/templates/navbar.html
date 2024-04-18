@@ -2,9 +2,10 @@
     <a href="{% url 'home' %}">Strona Główna</a>
     <a href="{% url 'categories' %}">Kategorie</a>
     <a href="{% url 'help' %}">Pomoc</a>
-    <a></a>
+    <a> <!-- To jest tylko po to, żeby była przestrzeń między przyciskami XDD --></a>
+
     {% if user.is_authenticated %}
-        <a>Konto: {{user}}</a>
+        <a href="{% url 'profile' %}">Profil</a>
         <a href="{% url 'logout' %}">Wyloguj się</a>
     {% else %}
         <a href="{% url 'login' %}">Login</a>
