@@ -13,7 +13,7 @@ class Product(models.Model):
     SellerID = models.ForeignKey(Seller, on_delete=models.SET_NULL, null = True)
     Image_url = models.CharField(max_length=256, null=True, blank=True, default="null")
     def __str__(self):
-        return f'{self.name} {self.price} {self.description} {self.Image_url}'
+        return f'{self.Name} {self.Price} {self.Description} {self.Image_url}'
 
 class Client(models.Model):
     Name = models.CharField(max_length=50)
