@@ -12,8 +12,28 @@
     <div id="space"></div>
     
     <header>
-        <h1 id="SG">Selery Shop</h1>
+        <a href="{% url 'home' %}"><p>Selery Shop</p></a>
     </header>
+    <div id="space"></div>
+
+    <div id="potd">
+
+        <h2>Produkt Dnia</h2>
+
+        <table>
+            {% for product in potd %}
+            <div class="produkty">
+                <div class="produkt">
+                    <img src="{{ product.Image_url}}">
+                    <a href="{% url 'product_details' product.id %}">{{product.Name}}</a>
+                    <h3>{{product.Price}} PLN</h3> 
+                </div>
+            </div>
+            {% endfor %}
+        </table>
+    </div>
+
+
     <div id="space"></div>
 
     <div id="main">
@@ -22,9 +42,9 @@
                 <div class="produkty">
                     <div class="produkt">
                         <img src="{{ product.Image_url}}">  
-                        <a href="{% url 'product_details' product.id %}"> {{product.Name}} </a>
+                        <a href="{% url 'product_details' product.id %}">{{product.Name}} </a>
                         <h3> {{product.Price}} PLN
-                            <form action="{% url 'help' %}">
+                            <form action="">
                                 <button type="submit">Buy</button>
                             </form>
                         </h3>

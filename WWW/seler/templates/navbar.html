@@ -2,7 +2,7 @@
     <a href="{% url 'home' %}">Strona Główna</a>
     <a href="{% url 'categories' %}">Kategorie</a>
     <a href="{% url 'help' %}">Pomoc</a>
-    <a> <!-- To jest tylko po to, żeby była przestrzeń między przyciskami XDD --></a>
+    <a> <!-- To jest tylko po to, żeby była przestrzeń między przekierowaniami XDD --></a>
 
     {% if user.is_authenticated %}
         <a href="{% url 'profile' %}">Profil</a>

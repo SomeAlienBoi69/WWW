@@ -10,25 +10,12 @@
 <body>
     {% include "navbar.html" %}
     <div id="space"></div>
+
+    <header>
+        <a href="{% url 'home' %}"><p>Selery Shop</p></a>
+    </header>
     
-
     <div id="space"></div>
-
-    <div id="main">
-        <table>
-            {% for product in products %} 
-                <div class="produkty">
-                    <div class="produkt">
-                        <img src="{{ product.Image_url}}">
-                        <h2> {{product.Name}} </h2>
-                        <h3> {{product.Price}}
-
-                        </h3>
-                    </div>
-                </div>
-            {% endfor %}
-        </table>
-    </div>
     <aside class="products__menu">
         <ul>
             <li>

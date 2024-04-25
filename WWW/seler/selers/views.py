@@ -2,16 +2,30 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
+import datetime
 
 from selers.models import Product, Seller, Client
 
 # Create your views here.
 
 def home_view(request):
+
+    data = datetime.datetime.now()
+
+    
+    try:
+        potd = data.day - (data.day // 2 + 2)
+    
+    except:
+        potd = 1
+
+    produkt = Product.objects.filter(id=potd)
+
     all_products = Product.objects.all()
     context = {
         'message': 'Witaj na stronie głównej',
-        'products': all_products
+        'products': all_products,
+        'potd': produkt
     }
 
     return render(request, 'home.html', context)

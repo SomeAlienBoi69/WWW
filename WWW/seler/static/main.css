@@ -16,6 +16,11 @@ header {
     height: 80px;
     justify-content: center;
     align-self: center;
+
+    p {
+        font-size: 60px;
+    }
+
 }
 
 body {
@@ -55,13 +60,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-}
-
-#back {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 table {
@@ -124,4 +122,16 @@ section {
 
     }
 
+}
+
+.products__menu {
+    display: flex;
+    
+}
+
+#potd {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
